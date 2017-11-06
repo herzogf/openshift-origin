@@ -180,6 +180,8 @@ cat > /home/${SUDOUSER}/setup-azure-master.yml <<EOF
       dest: "{{ azure_conf }}"
       content: |
         {
+          "cloud": "AZUREGERMANCLOUD",
+          "location": "germanycentral",
           "aadClientID" : "{{ g_aadClientId }}",
           "aadClientSecret" : "{{ g_aadClientSecret }}",
           "subscriptionID" : "{{ g_subscriptionId }}",
