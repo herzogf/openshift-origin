@@ -367,6 +367,8 @@ new_nodes
 
 # Set variables common for all OSEv3 hosts
 [OSEv3:vars]
+# disable service catalog (caused exception while installing into Azure German Cloud)
+openshift_enable_service_catalog=false
 ansible_ssh_user=$SUDOUSER
 ansible_become=yes
 openshift_install_examples=true
